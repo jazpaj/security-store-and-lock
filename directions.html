@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Map &amp; Directions | Security Store and Lock</title>
+  <meta name="description" content="Directions to Security Store and Lock and a property map showing the office, gate and unit buildings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <span class="hide-sm">Gate access 7:00 AM – 7:30 PM, seven days a week</span>
+      <span>Call us: <a href="tel:+19126328919">912-632-8919</a></span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="Security Store and Lock home">
+        <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#e8a33d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.3" fill="#e8a33d"/></svg></span>
+        <span class="logo-text">Security Store &amp; Lock<small>Self Storage</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="units.html">Units</a>
+        <a href="about.html">About</a>
+        <a href="directions.html" aria-current="page">Map &amp; Directions</a>
+        <a class="btn btn--accent" href="tel:+19126328919">Call to Rent</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="crumbs"><a href="index.html">Home</a> / Map &amp; Directions</div>
+        <span class="eyebrow">Map &amp; Directions</span>
+        <h1>Find us &amp; find your unit</h1>
+        <p class="lead">Get directions to the facility, then use our property map to head straight to your unit.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Location</span>
+          <h2>Getting here</h2>
+          <p><strong>Security Store and Lock</strong><br>
+            <span class="todo">Street address</span><br>
+            <span class="todo">City, State ZIP</span></p>
+          <p>Phone: <a href="tel:+19126328919"><strong>912-632-8919</strong></a></p>
+          <ol class="steps">
+            <li><strong>Head to our address</strong><br><span class="todo">Add a landmark or turn-by-turn tip, e.g. "Located on Hwy __, just past ___."</span></li>
+            <li><strong>Pull in at our entrance</strong><br>Use the property map below to find the office and your building.</li>
+            <li><strong>Check in at the office</strong><br>New tenants stop in during office hours (or by Saturday appointment) to rent a unit.</li>
+          </ol>
+          <div class="btn-row">
+            <!-- Replace the address in this link with the real one -->
+            <a class="btn btn--accent" href="https://www.google.com/maps/search/?api=1&query=Security+Store+and+Lock" target="_blank" rel="noopener">Open in Google Maps</a>
+            <a class="btn btn--outline" href="tel:+19126328919">Call for Directions</a>
+          </div>
+        </div>
+        <!-- Replace "Security+Store+and+Lock" in the src below with the full street address, e.g. 123+Main+St,+City,+GA+12345 -->
+        <iframe class="map-embed" title="Map to Security Store and Lock" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Security+Store+and+Lock&output=embed"></iframe>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="property-map">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Property Map</span>
+          <h2>Where everything is on the property</h2>
+          <p class="lead">Use this map to find the office, the gate and your building. The 11 units next to the office are outside the fence; all other units are behind the gate.</p>
+        </div>
+
+        <div class="site-map-wrap">
+          <!-- PROPERTY MAP: sample layout. Move, rename or add buildings to match the real property. -->
+          <svg class="site-map" viewBox="0 0 1000 640" role="img" aria-label="Property map showing the entrance, office, 11 ungated units next to the office, the gate, and fenced unit buildings B through E">
+            <defs>
+              <pattern id="grass" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#eef3ea"/><circle cx="3" cy="3" r="1" fill="#dbe6d3"/></pattern>
+              <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a33d"/></marker>
+            </defs>
+            <style>
+              .lbl { font: 700 15px Archivo, sans-serif; fill: #fff; }
+              .lbl-sm { font: 600 12px Inter, sans-serif; fill: #c3d1dc; }
+              .lbl-dark { font: 700 14px Archivo, sans-serif; fill: #18344a; }
+              .lbl-road { font: 700 13px Inter, sans-serif; fill: #fff; letter-spacing: .2em; }
+            </style>
+
+            <!-- ground -->
+            <rect width="1000" height="640" fill="url(#grass)"/>
+            <!-- road -->
+            <rect x="0" y="568" width="1000" height="56" fill="#55606a"/>
+            <line x1="0" y1="596" x2="1000" y2="596" stroke="#e8c76a" stroke-width="3" stroke-dasharray="26 18"/>
+            <text class="lbl-road" x="620" y="601">MAIN ROAD</text>
+
+            <!-- driveways & paved areas -->
+            <rect x="140" y="215" width="96" height="355" fill="#d4d9de"/>
+            <rect x="140" y="215" width="190" height="88" fill="#d4d9de"/>
+            <rect x="236" y="405" width="724" height="40" fill="#d4d9de"/>
+            <rect x="260" y="40" width="690" height="350" fill="#d4d9de"/>
+
+            <!-- fence -->
+            <rect x="250" y="30" width="710" height="370" fill="none" stroke="#18344a" stroke-width="4" stroke-dasharray="10 7"/>
+            <!-- gate opening -->
+            <rect x="244" y="222" width="14" height="74" fill="#d4d9de"/>
+            <rect x="246" y="222" width="8" height="74" fill="#e8a33d"/>
+            <text class="lbl-dark" x="262" y="214">GATE</text>
+
+            <!-- fenced buildings -->
+            <g>
+              <rect x="320" y="52" width="610" height="58" rx="4" fill="#18344a"/>
+              <text class="lbl" x="340" y="80">Building B</text><text class="lbl-sm" x="340" y="98">5' × 10' units</text>
+            </g>
+            <g>
+              <rect x="320" y="160" width="610" height="54" rx="4" fill="#18344a"/>
+              <text class="lbl" x="340" y="186">Building C</text><text class="lbl-sm" x="340" y="203">10' × 10' units</text>
+              <rect x="320" y="216" width="610" height="54" rx="4" fill="#24506f"/>
+              <text class="lbl" x="340" y="242">Building D</text><text class="lbl-sm" x="340" y="259">10' × 15' units</text>
+            </g>
+            <g>
+              <rect x="320" y="322" width="610" height="58" rx="4" fill="#18344a"/>
+              <text class="lbl" x="340" y="350">Building E</text><text class="lbl-sm" x="340" y="368">10' × 20' units</text>
+            </g>
+
+            <!-- office -->
+            <rect x="262" y="460" width="138" height="88" rx="5" fill="#e8a33d"/>
+            <text class="lbl-dark" x="300" y="502">OFFICE</text>
+            <text x="279" y="522" style="font:600 11px Inter,sans-serif;fill:#18344a">Check in here</text>
+
+            <!-- 11 ungated units next to office -->
+            <rect x="420" y="460" width="530" height="88" rx="4" fill="#7c93a6"/>
+            <g stroke="#ffffff" stroke-opacity=".5" stroke-width="2">
+              <line x1="468" y1="460" x2="468" y2="548"/><line x1="516" y1="460" x2="516" y2="548"/><line x1="564" y1="460" x2="564" y2="548"/>
+              <line x1="612" y1="460" x2="612" y2="548"/><line x1="660" y1="460" x2="660" y2="548"/><line x1="708" y1="460" x2="708" y2="548"/>
+              <line x1="756" y1="460" x2="756" y2="548"/><line x1="805" y1="460" x2="805" y2="548"/><line x1="853" y1="460" x2="853" y2="548"/>
+              <line x1="901" y1="460" x2="901" y2="548"/>
+            </g>
+            <rect x="560" y="487" width="250" height="34" rx="4" fill="#18344a" fill-opacity=".85"/>
+            <text class="lbl" x="575" y="509">Building A · 11 units (ungated)</text>
+
+            <!-- entrance arrow -->
+            <line x1="188" y1="560" x2="188" y2="320" stroke="#e8a33d" stroke-width="6" marker-end="url(#arrow)"/>
+            <path d="M188 258 L300 258" stroke="#e8a33d" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+            <rect x="96" y="540" width="40" height="22" rx="3" fill="#18344a"/>
+            <text x="102" y="555" style="font:700 11px Inter,sans-serif;fill:#fff">SIGN</text>
+            <text class="lbl-dark" x="148" y="636" style="font-size:12px">ENTRANCE</text>
+
+            <!-- lights -->
+            <g fill="#ffd56b" stroke="#c98420" stroke-width="1.5">
+              <circle cx="290" cy="130" r="7"/><circle cx="290" cy="290" r="7"/><circle cx="620" cy="135" r="7"/>
+              <circle cx="620" cy="296" r="7"/><circle cx="945" cy="135" r="7"/><circle cx="945" cy="296" r="7"/>
+              <circle cx="680" cy="425" r="7"/>
+            </g>
+            <!-- cameras -->
+            <g fill="#c0392b">
+              <rect x="268" y="40" width="16" height="11" rx="2"/><rect x="930" y="40" width="16" height="11" rx="2"/>
+              <rect x="268" y="378" width="16" height="11" rx="2"/><rect x="930" y="378" width="16" height="11" rx="2"/>
+              <rect x="408" y="452" width="16" height="11" rx="2"/>
+            </g>
+          </svg>
+          <div class="legend">
+            <span><i style="background:#e8a33d"></i>Office (check in here)</span>
+            <span><i style="background:#7c93a6"></i>Ungated units (next to office)</span>
+            <span><i style="background:#18344a"></i>Gated units</span>
+            <span><i style="border:2px dashed #18344a;background:transparent"></i>Fence</span>
+            <span><i style="background:#ffd56b;border-radius:50%;border:1.5px solid #c98420"></i>Night lighting</span>
+            <span><i style="background:#c0392b"></i>Day/night camera</span>
+          </div>
+        </div>
+        <p class="note"><span class="todo">Sample layout — update building positions, labels and unit numbers to match the actual property.</span></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container info-grid">
+        <div class="card">
+          <h3>Gate Access</h3>
+          <div class="gate-time">7:00 AM – 7:30 PM</div>
+          <span class="pill">Seven days a week</span>
+          <p class="note">Buildings B–E are behind the gate. Building A, the 11 units next to the office, is outside the fence.</p>
+        </div>
+        <div class="card">
+          <h3>Office Hours</h3>
+          <table class="hours">
+            <tr data-day="1"><th>Monday</th><td>8:00 AM – 5:00 PM</td></tr>
+            <tr data-day="2"><th>Tuesday</th><td>9:00 AM – 5:00 PM</td></tr>
+            <tr data-day="3"><th>Wednesday</th><td>8:00 AM – 5:00 PM</td></tr>
+            <tr data-day="4"><th>Thursday</th><td>9:00 AM – 5:00 PM</td></tr>
+            <tr data-day="5"><th>Friday</th><td>8:00 AM – 4:00 PM</td></tr>
+            <tr data-day="6"><th>Saturday</th><td>New rentals &amp; appointments only</td></tr>
+            <tr data-day="0"><th>Sunday</th><td>Closed</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html">
+            <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#e8a33d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.3" fill="#e8a33d"/></svg></span>
+            <span class="logo-text">Security Store &amp; Lock<small>Self Storage</small></span>
+          </a>
+          <p style="margin-top:16px">Clean, gated and well-lit self storage units in four convenient sizes.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="units.html">Units Offered</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="directions.html">Map &amp; Directions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+19126328919">912-632-8919</a></li>
+            <li>Phone: 8 AM – 8 PM, 6 days</li>
+            <li><span class="todo">Street address, City, State ZIP</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Gate Access</h4>
+          <ul>
+            <li>7:00 AM – 7:30 PM</li>
+            <li>Seven days a week</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Security Store and Lock. All rights reserved.</span>
+        <span>Thank you for choosing us!</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
