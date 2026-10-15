@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <div class="topbar">
     <div class="container">
@@ -25,18 +26,18 @@
         <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#e8a33d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.3" fill="#e8a33d"/></svg></span>
         <span class="logo-text">Security Store &amp; Lock<small>Self Storage</small></span>
       </a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="nav" aria-label="Main">
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="units.html">Units</a>
         <a href="about.html">About</a>
         <a href="directions.html" aria-current="page">Map &amp; Directions</a>
-        <a class="btn btn--accent" href="tel:+19126328919">Call to Rent</a>
+        <a class="btn btn--accent" href="tel:+19126328919">Call 912-632-8919</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="page-hero">
       <div class="container">
         <div class="crumbs"><a href="index.html">Home</a> / Map &amp; Directions</div>
@@ -80,6 +81,7 @@
           <p class="lead">Use this map to find the office, the gate and your building. The 11 units next to the office are outside the fence; all other units are behind the gate.</p>
         </div>
 
+        <p class="note swipe-hint">Swipe sideways to see the whole map.</p>
         <div class="site-map-wrap">
           <!-- PROPERTY MAP: sample layout. Move, rename or add buildings to match the real property. -->
           <svg class="site-map" viewBox="0 0 1000 640" role="img" aria-label="Property map showing the entrance, office, 11 ungated units next to the office, the gate, and fenced unit buildings B through E">
@@ -122,7 +124,8 @@
             <g>
               <rect x="320" y="160" width="610" height="54" rx="4" fill="#18344a"/>
               <text class="lbl" x="340" y="186">Building C</text><text class="lbl-sm" x="340" y="203">10' × 10' units</text>
-              <rect x="320" y="216" width="610" height="54" rx="4" fill="#24506f"/>
+              <rect x="320" y="216" width="610" height="54" rx="4" fill="#18344a"/>
+              <line x1="320" y1="215" x2="930" y2="215" stroke="#fff" stroke-width="2"/>
               <text class="lbl" x="340" y="242">Building D</text><text class="lbl-sm" x="340" y="259">10' × 15' units</text>
             </g>
             <g>
@@ -167,13 +170,21 @@
             </g>
           </svg>
           <div class="legend">
-            <span><i style="background:#e8a33d"></i>Office (check in here)</span>
-            <span><i style="background:#7c93a6"></i>Ungated units (next to office)</span>
-            <span><i style="background:#18344a"></i>Gated units</span>
-            <span><i style="border:2px dashed #18344a;background:transparent"></i>Fence</span>
-            <span><i style="background:#ffd56b;border-radius:50%;border:1.5px solid #c98420"></i>Night lighting</span>
-            <span><i style="background:#c0392b"></i>Day/night camera</span>
+            <span><i aria-hidden="true" style="background:#e8a33d"></i>Office (check in here)</span>
+            <span><i aria-hidden="true" style="background:#7c93a6"></i>Ungated units (next to office)</span>
+            <span><i aria-hidden="true" style="background:#18344a"></i>Gated units</span>
+            <span><i aria-hidden="true" style="border:2px dashed #18344a;background:transparent"></i>Fence</span>
+            <span><i aria-hidden="true" style="background:#ffd56b;border-radius:50%;border:1.5px solid #c98420"></i>Night lighting</span>
+            <span><i aria-hidden="true" style="background:#c0392b"></i>Day/night camera</span>
           </div>
+          <ul class="map-key">
+            <li><strong>Office</strong>: at the entrance, check in here</li>
+            <li><strong>Building A</strong>: 11 units next to the office, outside the gate</li>
+            <li><strong>Building B</strong>: 5' × 10' units (behind gate)</li>
+            <li><strong>Building C</strong>: 10' × 10' units (behind gate)</li>
+            <li><strong>Building D</strong>: 10' × 15' units (behind gate)</li>
+            <li><strong>Building E</strong>: 10' × 20' units (behind gate)</li>
+          </ul>
         </div>
         <p class="note"><span class="todo">Sample layout — update building positions, labels and unit numbers to match the actual property.</span></p>
       </div>
@@ -190,15 +201,26 @@
         <div class="card">
           <h3>Office Hours</h3>
           <table class="hours">
-            <tr data-day="1"><th>Monday</th><td>8:00 AM – 5:00 PM</td></tr>
-            <tr data-day="2"><th>Tuesday</th><td>9:00 AM – 5:00 PM</td></tr>
-            <tr data-day="3"><th>Wednesday</th><td>8:00 AM – 5:00 PM</td></tr>
-            <tr data-day="4"><th>Thursday</th><td>9:00 AM – 5:00 PM</td></tr>
-            <tr data-day="5"><th>Friday</th><td>8:00 AM – 4:00 PM</td></tr>
-            <tr data-day="6"><th>Saturday</th><td>New rentals &amp; appointments only</td></tr>
-            <tr data-day="0"><th>Sunday</th><td>Closed</td></tr>
+              <caption class="sr-only">Office hours</caption>
+            <tr data-day="1"><th scope="row">Monday</th><td>8:00 AM – 5:00 PM</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>9:00 AM – 5:00 PM</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>8:00 AM – 5:00 PM</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>9:00 AM – 5:00 PM</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>8:00 AM – 4:00 PM</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>New rentals &amp; appointments only</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
           </table>
         </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <div>
+          <h2>Questions about your unit?</h2>
+          <p>Give us a call and we'll point you in the right direction.</p>
+        </div>
+        <a class="btn btn--navy" href="tel:+19126328919">Call 912-632-8919</a>
       </div>
     </section>
   </main>
@@ -244,6 +266,8 @@
       </div>
     </div>
   </footer>
+
+  <a class="call-bar" href="tel:+19126328919">Call to Rent: 912-632-8919</a>
 
   <script src="js/main.js"></script>
 </body>

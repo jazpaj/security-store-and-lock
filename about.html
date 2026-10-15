@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <div class="topbar">
     <div class="container">
@@ -25,18 +26,18 @@
         <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#e8a33d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.3" fill="#e8a33d"/></svg></span>
         <span class="logo-text">Security Store &amp; Lock<small>Self Storage</small></span>
       </a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="nav" aria-label="Main">
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="units.html">Units</a>
         <a href="about.html" aria-current="page">About</a>
         <a href="directions.html">Map &amp; Directions</a>
-        <a class="btn btn--accent" href="tel:+19126328919">Call to Rent</a>
+        <a class="btn btn--accent" href="tel:+19126328919">Call 912-632-8919</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="page-hero">
       <div class="container">
         <div class="crumbs"><a href="index.html">Home</a> / About Us</div>
@@ -55,7 +56,7 @@
           <p>We know your belongings matter. That's why every unit is cleaned and sanitized after each tenant moves out, and why the property is fenced, gated, lit at night and covered by cameras around the clock.</p>
           <p>Have a question? Call us at <a href="tel:+19126328919"><strong>912-632-8919</strong></a>. We answer the phone from 8:00 AM to 8:00 PM, six days a week.</p>
         </div>
-        <div class="photo" data-label="Photo: owner / office team"></div>
+        <div class="photo" aria-hidden="true" data-label="Photo: owner / office team"></div>
       </div>
     </section>
 
@@ -65,7 +66,7 @@
           <span class="eyebrow">Facility Information</span>
           <h2>How we keep your things safe</h2>
         </div>
-        <div class="features" style="margin-top:0">
+        <div class="features">
           <div class="feature"><h3>Cleaned &amp; Sanitized</h3><p>Each unit is cleaned and sanitized after every tenant departs.</p></div>
           <div class="feature"><h3>Gated &amp; Fenced</h3><p>All units are gated and fenced, except the 11 units next to our office.</p></div>
           <div class="feature"><h3>Lighted at Night</h3><p>All units are lighted at night.</p></div>
@@ -84,13 +85,14 @@
           <div class="card">
             <h3>Office Hours</h3>
             <table class="hours">
-              <tr data-day="1"><th>Monday</th><td>8:00 AM – 5:00 PM</td></tr>
-              <tr data-day="2"><th>Tuesday</th><td>9:00 AM – 5:00 PM</td></tr>
-              <tr data-day="3"><th>Wednesday</th><td>8:00 AM – 5:00 PM</td></tr>
-              <tr data-day="4"><th>Thursday</th><td>9:00 AM – 5:00 PM</td></tr>
-              <tr data-day="5"><th>Friday</th><td>8:00 AM – 4:00 PM</td></tr>
-              <tr data-day="6"><th>Saturday</th><td>New rentals &amp; appointments only</td></tr>
-              <tr data-day="0"><th>Sunday</th><td>Closed</td></tr>
+              <caption class="sr-only">Office hours</caption>
+              <tr data-day="1"><th scope="row">Monday</th><td>8:00 AM – 5:00 PM</td></tr>
+              <tr data-day="2"><th scope="row">Tuesday</th><td>9:00 AM – 5:00 PM</td></tr>
+              <tr data-day="3"><th scope="row">Wednesday</th><td>8:00 AM – 5:00 PM</td></tr>
+              <tr data-day="4"><th scope="row">Thursday</th><td>9:00 AM – 5:00 PM</td></tr>
+              <tr data-day="5"><th scope="row">Friday</th><td>8:00 AM – 4:00 PM</td></tr>
+              <tr data-day="6"><th scope="row">Saturday</th><td>New rentals &amp; appointments only</td></tr>
+              <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
             </table>
             <p class="note"><strong>Phone contact:</strong> 8:00 AM – 8:00 PM, six days a week.</p>
           </div>
@@ -117,12 +119,12 @@
           <h2>Take a look around</h2>
         </div>
         <div class="gallery">
-          <div class="photo" data-label="Photo: front gate"></div>
-          <div class="photo" data-label="Photo: rows of units"></div>
-          <div class="photo" data-label="Photo: units lit at night"></div>
-          <div class="photo" data-label="Photo: office"></div>
-          <div class="photo" data-label="Photo: clean unit interior"></div>
-          <div class="photo" data-label="Photo: security camera / fence"></div>
+          <div class="photo" aria-hidden="true" data-label="Photo: front gate"></div>
+          <div class="photo" aria-hidden="true" data-label="Photo: rows of units"></div>
+          <div class="photo" aria-hidden="true" data-label="Photo: units lit at night"></div>
+          <div class="photo" aria-hidden="true" data-label="Photo: office"></div>
+          <div class="photo" aria-hidden="true" data-label="Photo: clean unit interior"></div>
+          <div class="photo" aria-hidden="true" data-label="Photo: security camera / fence"></div>
         </div>
       </div>
     </section>
@@ -133,7 +135,10 @@
           <h2>Come see us</h2>
           <p>Stop by during office hours or call to set up a Saturday appointment.</p>
         </div>
-        <a class="btn btn--navy" href="directions.html">Get Directions</a>
+        <div class="btn-row">
+          <a class="btn btn--navy" href="tel:+19126328919">Call 912-632-8919</a>
+          <a class="btn btn--outline-dark" href="directions.html">Get Directions</a>
+        </div>
       </div>
     </section>
   </main>
@@ -179,6 +184,8 @@
       </div>
     </div>
   </footer>
+
+  <a class="call-bar" href="tel:+19126328919">Call to Rent: 912-632-8919</a>
 
   <script src="js/main.js"></script>
 </body>

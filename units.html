@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <div class="topbar">
     <div class="container">
@@ -25,18 +26,18 @@
         <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#e8a33d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.3" fill="#e8a33d"/></svg></span>
         <span class="logo-text">Security Store &amp; Lock<small>Self Storage</small></span>
       </a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="nav" aria-label="Main">
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="units.html" aria-current="page">Units</a>
         <a href="about.html">About</a>
         <a href="directions.html">Map &amp; Directions</a>
-        <a class="btn btn--accent" href="tel:+19126328919">Call to Rent</a>
+        <a class="btn btn--accent" href="tel:+19126328919">Call 912-632-8919</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="page-hero">
       <div class="container">
         <div class="crumbs"><a href="index.html">Home</a> / Units Offered</div>
@@ -50,7 +51,7 @@
       <div class="container stack">
 
         <div class="split" id="5x10">
-          <div class="photo" data-label="Photo: 5' × 10' unit"></div>
+          <div class="photo" aria-hidden="true" data-label="Photo: 5' × 10' unit"></div>
           <div>
             <span class="eyebrow">Small · 50 sq ft</span>
             <h2>5' × 10' Unit</h2>
@@ -61,14 +62,14 @@
               <li>Bikes, sports gear and yard tools</li>
               <li>Business files and records</li>
             </ul>
-            <a class="btn btn--accent" href="tel:+19126328919">Call About Availability</a>
+            <a class="btn btn--accent" href="tel:+19126328919">Call About Availability<span class="sr-only"> of 5' × 10' units</span></a>
           </div>
         </div>
 
-        <hr style="border:0;border-top:1px solid var(--line);margin:56px 0">
+        <hr class="divider">
 
         <div class="split reverse" id="10x10">
-          <div class="photo" data-label="Photo: 10' × 10' unit"></div>
+          <div class="photo" aria-hidden="true" data-label="Photo: 10' × 10' unit"></div>
           <div>
             <span class="eyebrow">Medium · 100 sq ft</span>
             <h2>10' × 10' Unit</h2>
@@ -79,14 +80,14 @@
               <li>Couches, tables and a stack of boxes</li>
               <li>Inventory or equipment for a small business</li>
             </ul>
-            <a class="btn btn--accent" href="tel:+19126328919">Call About Availability</a>
+            <a class="btn btn--accent" href="tel:+19126328919">Call About Availability<span class="sr-only"> of 10' × 10' units</span></a>
           </div>
         </div>
 
-        <hr style="border:0;border-top:1px solid var(--line);margin:56px 0">
+        <hr class="divider">
 
         <div class="split" id="10x15">
-          <div class="photo" data-label="Photo: 10' × 15' unit"></div>
+          <div class="photo" aria-hidden="true" data-label="Photo: 10' × 15' unit"></div>
           <div>
             <span class="eyebrow">Large · 150 sq ft</span>
             <h2>10' × 15' Unit</h2>
@@ -97,14 +98,14 @@
               <li>Furniture storage during a renovation</li>
               <li>Lawn equipment and workshop tools</li>
             </ul>
-            <a class="btn btn--accent" href="tel:+19126328919">Call About Availability</a>
+            <a class="btn btn--accent" href="tel:+19126328919">Call About Availability<span class="sr-only"> of 10' × 15' units</span></a>
           </div>
         </div>
 
-        <hr style="border:0;border-top:1px solid var(--line);margin:56px 0">
+        <hr class="divider">
 
         <div class="split reverse" id="10x20">
-          <div class="photo" data-label="Photo: 10' × 20' unit"></div>
+          <div class="photo" aria-hidden="true" data-label="Photo: 10' × 20' unit"></div>
           <div>
             <span class="eyebrow">Extra Large · 200 sq ft</span>
             <h2>10' × 20' Unit</h2>
@@ -115,7 +116,7 @@
               <li>Full household moves</li>
               <li>Large furniture pieces and long-term storage</li>
             </ul>
-            <a class="btn btn--accent" href="tel:+19126328919">Call About Availability</a>
+            <a class="btn btn--accent" href="tel:+19126328919">Call About Availability<span class="sr-only"> of 10' × 20' units</span></a>
           </div>
         </div>
 
@@ -128,7 +129,7 @@
           <span class="eyebrow">Every Unit Includes</span>
           <h2>What you get with every rental</h2>
         </div>
-        <div class="features" style="margin-top:0">
+        <div class="features">
           <div class="feature"><h3>Cleaned &amp; Sanitized</h3><p>Each unit is cleaned and sanitized after every tenant departs.</p></div>
           <div class="feature"><h3>Gated &amp; Fenced</h3><p>All units are gated and fenced, except the 11 units next to our office.</p></div>
           <div class="feature"><h3>Lighted at Night</h3><p>All units are lighted at night.</p></div>
@@ -189,6 +190,8 @@
       </div>
     </div>
   </footer>
+
+  <a class="call-bar" href="tel:+19126328919">Call to Rent: 912-632-8919</a>
 
   <script src="js/main.js"></script>
 </body>

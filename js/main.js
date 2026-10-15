@@ -6,6 +6,13 @@ if (toggle && nav) {
     const open = nav.classList.toggle("open");
     toggle.setAttribute("aria-expanded", open);
   });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav.classList.contains("open")) {
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.focus();
+    }
+  });
 }
 
 // Highlight today's row in any office-hours table (rows carry data-day="0".."6", Sunday = 0)
